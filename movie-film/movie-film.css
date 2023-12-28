@@ -1,0 +1,124 @@
+body {
+  background-color: #334;
+  overflow-x: hidden;
+  background-image: url(images/image-3rqpbrb6.png);
+
+  --size: 40vh;
+  --top: calc((var(--size) * 0.75 - (var(--size) * 0.75) * 0.9) / 2);
+  --bottom: calc(
+    (var(--size) * 0.75 - (var(--size) * 0.75) * 0.9) / 2 + (var(--size) * 0.75) *
+      0.901
+  );
+}
+.cover {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-image: radial-gradient(
+    at 30%,
+    rgba(236, 238, 245, 0.765) 30%,
+    rgba(170, 194, 237, 0.497) 40%,
+    rgba(1, 64, 104, 0.835)
+  );
+}
+.movies {
+  border: 1px solid transparent;
+  width: var(--size);
+  height: var(--size);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(45, 87, 133, 0.461),
+    rgba(1, 64, 104, 0.835)
+  );
+  box-shadow: inset 0 0 10px black;
+  margin-top: calc((100vh - var(--size)) / 2);
+  margin-left: calc(100vw / 3 - var(--size) / 2);
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 5px rgb(0, 3, 12));
+}
+.movies .film {
+  height: calc(var(--size) * 0.75);
+
+  /*
+  position: absolute;
+  left: 0;
+  right: 0;
+  */
+
+  /*
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 70vw;
+  */
+
+  margin-left: calc(50% - 55vw);
+  margin-right: calc(50% - 60vw - (100vw / 3 - var(--size) / 2));
+
+  /*
+  transform: translateY(calc(50% - calc(var(--size) * 0.75) / 3));
+  */
+
+  margin-top: calc((var(--size) - (var(--size) * 0.75)) / 2);
+
+  background-image: linear-gradient(
+      transparent,
+      transparent var(--top),
+      rgba(2, 18, 57, 0.616) var(--top),
+      rgba(2, 18, 57, 0.616) var(--bottom),
+      transparent var(--bottom)
+    ),
+    radial-gradient(transparent 50%, rgba(10, 10, 13, 0.65) 50%),
+    radial-gradient(transparent 50%, rgba(10, 10, 13, 0.65) 50%);
+  background-size: cover, calc(var(--top) + 0.2vh) var(--top),
+    calc(var(--top) + 0.2vh) var(--top);
+
+  background-repeat: repeat, repeat-x, repeat-x;
+  background-position: left top, left top, left bottom;
+  filter: drop-shadow(3px 3px 1px rgb(22, 28, 60));
+}
+.movies .controls {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(4, 55, 80, 0.557),
+    rgba(1, 17, 88, 0.647)
+  );
+  filter: drop-shadow(5px 5px 5px rgb(0, 3, 12));
+  box-shadow: inset -2px -4px 5px rgb(1, 1, 39);
+  height: calc(var(--size) * 0.8);
+  width: calc(var(--size) * 0.8);
+  /*margin: auto;
+transform: translateY(-97%);
+*/
+  transform: translateY(
+    calc(
+      -1 * (var(--size) * 0.75 +
+            (((var(--size) * 0.8) - (var(--size) * 0.75)) / 2))
+    )
+  );
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+}
+.movies .controls button {
+  border: none;
+  background-color: transparent;
+  transform: translateY(calc((var(--size) * 0.2) * 1.5));
+  cursor: pointer;
+}
+.movies .controls button svg {
+  width: calc(var(--size) * 0.2);
+  height: calc(var(--size) * 0.2);
+  fill: white;
+}
+.movies img {
+  height: calc((var(--size) * 0.75) * 0.9);
+  margin-top: calc((var(--size) * 0.75 - (var(--size) * 0.75) * 0.9) / 2);
+
+  margin-right: calc(
+    ((var(--size) * 0.75 - (var(--size) * 0.75) * 0.9) / 2) / 3
+  );
+  margin-left: calc(
+    ((var(--size) * 0.75 - (var(--size) * 0.75) * 0.9) / 2) / 3
+  );
+}
